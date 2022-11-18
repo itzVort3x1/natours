@@ -4,7 +4,8 @@
   "description": "landing page for natours",
   "main": "index.js",
   "scripts": {
-    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+    "compile:sass": "node-sass sass/main.scss css/style.css -w",
+    "dev": "concurrently \"npm run compile:sass\" \"live-server\""
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,7 @@
   },
   "homepage": "https://github.com/itzVort3x1/natours#readme",
   "dependencies": {
+    "concurrently": "^7.5.0",
     "live-server": "^1.2.2",
     "node-sass": "^8.0.0"
   }
